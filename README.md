@@ -70,30 +70,34 @@ The FastAPI application will be available at http://localhost:8000.
 
 ### 4. Building and Running the Application (Docker)
 
-Build the Docker image:
+Build the Docker image for all the defined services in the `docker-compose.yml`
 
 ```bash
-
-
+docker-compose build
 ```
 
-Run the Docker containers:
-
+Run the Docker containers and all the services.
 
 ```bash
-
+docker-compose up
 ```
 
+Or simply, run the next command (build and run at the same line).
+
+```bash
+docker-compose up --build 
+```
+
+The FastAPI application will be available at http://localhost:8000.
 
 ### 4. Stopping the Application
 
 To stop the running containers:
 
 ```bash
+control + C 
 
 ```
-
-### 5. Building and Running the Application
 
 
 
