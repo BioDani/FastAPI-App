@@ -1,0 +1,25 @@
+# Specify the Docker Compose version
+version: "3.8"  
+
+services:
+  backend:
+
+    # Build the backend service using the Dockerfile in the ./app directory
+    build:
+      context: .
+      dockerfile: ./app/Dockerfile
+
+    # Map port 5000 inside the container to port 5555 on the host machine (container:hostMachine)
+    ports:
+      - "8000:8000"  
+
+    # Connect the backend service to the my_network network
+    networks:
+      - my_network 
+    
+    # Mount the host's /backend directory to /app inside the container
+    volumes:
+      - ./app:/app  
+
+networks:
+    my_network:  # Define a custom network named my_network
