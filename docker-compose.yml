@@ -1,5 +1,6 @@
 # Specify the Docker Compose version
-version: "3.8"  
+version: "3.8"
+name: fastapi_container
 
 services:
   backend:
@@ -15,7 +16,7 @@ services:
 
     # Connect the backend service to the my_network network
     networks:
-      - my_network 
+      - my_network
     
     # Mount the host's /backend directory to /app inside the container
     volumes:
